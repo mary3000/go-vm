@@ -31,7 +31,7 @@ func main() {
 		return
 	}
 
-	b, err := ioutil.ReadFile(fileName) // just pass the file name
+	b, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		log.Errorf(err.Error())
 		log.Errorf(src.FailEmoji)

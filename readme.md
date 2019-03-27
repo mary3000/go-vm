@@ -18,8 +18,8 @@ It is simple implementation of Virtual Machine with its own asm language and Von
 
 ## Usage
 
-`./main <path-to-file>`/`go main <path-to-file>`, where file is written in `gasm` language and gas `.gasm` extension.
+`./main <path-to-file>` or `go main <path-to-file>`, where file is written in `gasm` language and has `.gasm` extension.
 
 Or you can run demo:
-`./main`/`go main`  
+`./main` or `go main`  
 It will execute `asm_data/fibonacci.gasm` file, which is a recursive version of fibonacci calculation.

@@ -1,0 +1,30 @@
+!var1 int 42
+!one int 1
+!two int 2
+!s str Fibonacci calculator
+!s1 str ಠ‿↼
+
+.fibonacci
+out !s
+out !s1
+in %p1
+go fib_rec
+out %r1
+ret
+
+.fib_rec
+if< %p1 !two
+mov %r1 %p1
+ret
+fi
+push %p1
+sub %p1 !one
+go fib_rec
+mov %tmp %r1
+pop %p1
+sub %p1 !two
+push %tmp
+go fib_rec
+pop %tmp
+add %r1 %tmp
+ret

@@ -1,0 +1,12 @@
+!var1 int 42
+!one int 1
+!two int 2
+
+.test
+in %p1
+go fun
+ret
+
+.fun
+out %p1
+ret

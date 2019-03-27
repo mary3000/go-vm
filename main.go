@@ -14,7 +14,7 @@ import (
 
 func main() {
 	if len(os.Args) > 2 {
-		log.Errorf("Wrong number of arguments. Expected: 0 or 1, given: %d", len(os.Args) - 1)
+		log.Errorf("Wrong number of arguments. Expected: 0 or 1, given: %d", len(os.Args)-1)
 		log.Errorf(src.FailEmoji)
 		return
 	}
@@ -72,9 +72,24 @@ func main() {
 	if err != nil {
 		log.Errorf(err.Error())
 		log.Errorf(src.FailEmoji)
+		return
 	}
 
 	time.Sleep(500 * time.Millisecond)
 	fmt.Println("What a power! I'm so strooong ᕙ(⇀‸↼‶)ᕗ")
 	fmt.Println("See ya next time!")
+
+	disasm := src.Disassembler{}
+	err = disasm.Parse(name + src.BinExt)
+	if err != nil {
+		log.Errorf(err.Error())
+		log.Errorf(src.FailEmoji)
+		return
+	}
+
+	err = disasm.WriteAsm(name + src.AsmExt)
+	if err != nil {
+		log.Errorf(err.Error())
+		log.Errorf(src.FailEmoji)
+	}
 }

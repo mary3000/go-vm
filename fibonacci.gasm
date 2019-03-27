@@ -1,0 +1,27 @@
+!var0 int 42
+!var1 int 1
+!var2 int 2
+!var3 str Fibonacci calculator
+!var4 str ಠ‿↼
+out !var3
+out !var4
+in %p1
+go label0
+out %r1
+ret
+.label0
+if< %p1 !var2
+mov %r1 %p1
+ret
+fi
+push %p1
+sub %p1 !var1
+go label0
+mov %tmp %r1
+pop %p1
+sub %p1 !var2
+push %tmp
+go label0
+pop %tmp
+add %r1 %tmp
+ret

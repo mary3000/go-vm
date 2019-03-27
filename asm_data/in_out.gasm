@@ -1,12 +1,14 @@
 !var1 int 42
-!one int 1
+!one int 66
 !two int 2
+!sss str aaabbbcc
+!dd str drjdjdjdjjjlkkkkkk
 
-.test
 in %p1
 go fun
 ret
 
 .fun
 out %p1
+out !sss
 ret

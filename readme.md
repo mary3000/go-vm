@@ -1,6 +1,6 @@
 # Golang Virtual Machine
 
-It is simple implementation of Virtual Machine with its own asm language and Von Neumann architecture.
+It is simple implementation of Virtual Machine with its own asm language and Von Neumann architecture. It has assembler, cpu and disassembler.
 
 
 ## Commands and marks of `gasm` language:
@@ -23,3 +23,5 @@ It is simple implementation of Virtual Machine with its own asm language and Von
 Or you can run demo:
 `./main` or `go main`  
 It will execute `asm_data/fibonacci.gasm` file, which is a recursive version of fibonacci calculation.
+
+`main` will generate binary file, execute it, and also disassemble it back.
